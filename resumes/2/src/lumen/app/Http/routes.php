@@ -11,6 +11,11 @@
 |
 */
 
-$app->get('/', function () use ($app) {
-    return $app->welcome();
+$app->get('/', function(){
+	return view('index');
 });
+
+$app->get('/messages', 'MessageController@getMessages');
+$app->post('/messages', 'MessageController@postMessages');
+
+

@@ -2,7 +2,10 @@
 
 require_once __DIR__.'/../vendor/autoload.php';
 
-// Dotenv::load(__DIR__.'/../');
+use Illuminate\Http\Request;
+
+
+Dotenv::load(__DIR__.'/../');
 
 /*
 |--------------------------------------------------------------------------
@@ -92,8 +95,14 @@ $app->singleton(
 |
 */
 
+$app->bind('Predis\Client', function($app){
+	$client = new Predis\Client();
+	return $client;
+});
+
 $app->group(['namespace' => 'App\Http\Controllers'], function ($app) {
     require __DIR__.'/../app/Http/routes.php';
 });
+
 
 return $app;

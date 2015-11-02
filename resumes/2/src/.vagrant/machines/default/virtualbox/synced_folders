@@ -1,0 +1,1 @@
+{"rsync":{"/home/vagrant/sync":{"type":"rsync","guestpath":"/home/vagrant/sync","hostpath":"/Users/kazup0n/src/github.com/kazup0n/fusion-techtalk/resumes/2/src","disabled":false,"owner":"vagrant","group":"vagrant"}},"virtualbox":{"/vagrant_data":{"guestpath":"/vagrant_data","hostpath":"/Users/kazup0n/src/github.com/kazup0n/fusion-techtalk/resumes/2/src","disabled":false}}}
